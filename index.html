@@ -46,6 +46,13 @@
         <dl>
             <dt>User Agent:</dt>
             <dd id="userAgent">loading...</dd>
+
+            <dt>Referrer:</dt>
+            <dd id="referrer">loading...</dd>
+
+            <dt>Cookies:</dt>
+            <dd id="cookies">loading...</dd>
+
         </dl>
     </main>
 </body>
@@ -54,6 +61,8 @@
 
 <script>
     (() => {
-        document.getElementById("userAgent").innerText = navigator.userAgent
+        document.getElementById("userAgent").innerText = navigator.userAgent;
+        document.getElementById("referrer").innerText = document.referrer || "(none)";
+        document.getElementById("cookies").innerText = document.cookie || "(none)";
     })()
 </script>
