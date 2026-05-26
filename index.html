@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚫🪲</title>
+    <style>
+        html {
+            width: 100vw;
+        }
+
+        body {
+            box-sizing: border-box;
+            background: #F8F9FA;
+            color: #828e9f;
+            font: 1.2rem sans-serif;
+            width: 100%;
+            margin: 0;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: #242936;
+                color: #707a8c;
+            }
+        }
+
+        main {
+            width: 100%;
+            max-width: 50rem;
+        }
+
+        dl {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <dl>
+            <dt>User Agent:</dt>
+            <dd id="userAgent">loading...</dd>
+        </dl>
+    </main>
+</body>
+
+</html>
+
+<script>
+    (() => {
+        document.getElementById("userAgent").innerText = navigator.userAgent
+    })()
+</script>
